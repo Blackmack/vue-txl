@@ -140,7 +140,7 @@
           background:url("../../assets/icon/icon-pwd.png") no-repeat center;
           z-index:1;
         }
-        .login-submit {
+        .login-submit { 
           width: 100%;
           margin-top:30px;
         }
