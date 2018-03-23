@@ -1,7 +1,6 @@
 <template>
   <div class="main clearfix">
     <div class="left-img">
-      图片占位
     </div>
     <div class="login-content">
       <h2 class="form-title">LOGIN</h2>
@@ -14,9 +13,9 @@
           <i class="icon-pwd"></i>
           <el-input placeholder="密码" type="password" v-model="rulesForm.pwd" auto-complete="off"></el-input>
         </el-form-item>
-        <el-form-item  prop="imgCode">
-          <el-input placeholder="验证码" type="text" v-model="rulesForm.imgCode" auto-complete="off"></el-input>
-        </el-form-item>
+        <!--<el-form-item  prop="imgCode">-->
+          <!--<el-input placeholder="验证码" type="text" v-model="rulesForm.imgCode" auto-complete="off"></el-input>-->
+        <!--</el-form-item>-->
         <el-form-item>
           <el-button plain class="login-submit" @click="submitForm('rulesForm')">登录</el-button>
         </el-form-item>
@@ -41,14 +40,14 @@
           callback();
         }
       }
-      var validatePass3 = (rule, value, callback) => {
-        if (value === '') {
-          callback(new Error('请输入验证码'));
-        }
-        else {
-          callback();
-        }
-      }
+//      var validatePass3 = (rule, value, callback) => {
+//        if (value === '') {
+//          callback(new Error('请输入验证码'));
+//        }
+//        else {
+//          callback();
+//        }
+//      }
       return {
         rulesForm: {
           userName: '',
@@ -61,10 +60,11 @@
           ],
           pwd: [
             {validator: validatePass2, trigger: 'blur'}
-          ],
-          imgCode: [
-            {validator: validatePass3, trigger: 'blur'}
           ]
+//          ,
+//          imgCode: [
+//            {validator: validatePass3, trigger: 'blur'}
+//          ]
         }
       }
     },
@@ -93,18 +93,21 @@
   .main {
     height: 100%;
     .left-img {
-      width: 59%;
+      width: 39%;
       height: 99%;
       float: left;
-      border:1px solid #ccc;
       text-align:center;
       vertical-align:middle;
+      background:url("../../assets/banner4.jpg") no-repeat center;
     }
     .login-content {
-      width: 40%;
+      width: 60%;
       height: 100%;
       float: left;
       position: relative;
+      border-style:solid;
+      border-width:0 0 0 1px;
+      border-color:#ccc;
       .form-title {
         text-align: center;
         width: 500px;
@@ -148,4 +151,20 @@
     }
   }
 
+
+  .el-carousel__item h3 {
+    color: #475669;
+    font-size: 14px;
+    opacity: 0.75;
+    line-height: 200px;
+    margin: 0;
+  }
+
+  .el-carousel__item:nth-child(2n) {
+    background-color: #99a9bf;
+  }
+
+  .el-carousel__item:nth-child(2n+1) {
+    background-color: #d3dce6;
+  }
 </style>
