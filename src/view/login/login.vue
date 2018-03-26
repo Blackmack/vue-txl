@@ -72,7 +72,7 @@
       submitForm(formName) {
         this.$refs[formName].validate((valid) => {
           if (valid) {
-            alert('submit!');
+            console.log(this.rulesForm)
           } else {
             console.log('error submit!!');
             return false;
@@ -143,7 +143,7 @@
           background:url("../../assets/icon/icon-pwd.png") no-repeat center;
           z-index:1;
         }
-        .login-submit { 
+        .login-submit {
           width: 100%;
           margin-top:30px;
         }

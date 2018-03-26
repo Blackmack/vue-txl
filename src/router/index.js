@@ -6,6 +6,8 @@ import Login from '@/view/login/login'
 Vue.use(Router)
 
 export default new Router({
+  base: './',
+  mode:'history',
   routes: [
     {
       path: '/test',
@@ -13,7 +15,7 @@ export default new Router({
       component: TEST
     },
     {
-      path: '/login',
+      path: '/',
       name: 'login',
       component: Login
     }
