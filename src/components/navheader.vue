@@ -1,22 +1,77 @@
 <template>
   <div>
-    <ul class="top-user">
-      <li><router-link to="login">登录</router-link></li>
-      <li><a href="">注册</a></li>
-    </ul>
     <div class="top-nav-wrap">
       <nav class="top-nav">
-        <ul>
-          <li class="active"><a href="">首页</a></li>
-          <li><a href="">动态</a></li>
-          <li><a href="">我的家乡</a></li>
+        <ul class="clearfix">
+          <li class="active"><router-link to="/">首页</router-link></li>
+          <li><router-link to="/DT">动态</router-link></li>
+          <li><router-link to="/DZ">段子</router-link></li>
         </ul>
       </nav>
     </div>
+    <div class="main clearfix">
+      <div class="content-wrap">
+        <div class="list-item">
+            <div class="item-title">
+              <h2>我为什么要建这个站点</h2>
+              <div class="time">2018.04.07&nbsp;&nbsp;<span class="yuan">原创</span>&nbsp;
+                <span class="zan">hot</span>
+              </div>
+            </div>
+            <div class="item-desc">因为我想建就建，因为我想建就建，因为我想建就建，因为我想建就建，因为我想建就建，因为我想建就建，因为我想建就建，因为我想建就建，</div>
+        </div>
+        <div class="list-item">
+          <div class="item-title">
+            <h2>我为什么要建这个站点</h2>
+            <div class="time">2018.04.07&nbsp;&nbsp;<span class="yuan">原创</span>&nbsp;
+              <span class="zan">hot</span>
+            </div>
+          </div>
+          <div class="item-desc">因为我想建就建，因为我想建就建，因为我想建就建，因为我想建就建，</div>
+        </div>
+        <div class="list-item">
+          <div class="item-title">
+            <h2>我为什么要建这个站点</h2>
+            <div class="time">2018.04.07&nbsp;&nbsp;<span class="yuan">原创</span>&nbsp;
+              <span class="zan">hot</span>
+            </div>
+          </div>
+          <div class="item-desc">因为我想建就建，因为我想建就建，因为我想建就建，因为我想建就建，因为我想建就建，</div>
+        </div>
+        <div class="list-item">
+          <div class="item-title">
+            <h2>我为什么要建这个站点</h2>
+            <div class="time">2018.04.07&nbsp;&nbsp;<span class="yuan">原创</span>&nbsp;
+              <span class="zan">hot</span>
+            </div>
+          </div>
+          <div class="item-desc">因为我想建就建，因为我想建就建，因为我想建就建，因为我想建就建，因为我想建就建，</div>
+        </div>
+        <div class="list-item">
+          <div class="item-title">
+            <h2>我为什么要建这个站点</h2>
+            <div class="time">2018.04.07&nbsp;&nbsp;<span class="yuan">原创</span>&nbsp;
+              <span class="zan">hot</span>
+            </div>
+          </div>
+          <div class="item-desc">因为我想建就建，因为我想建就建，因为我想建就建，因为我想建就建，因为我想建就建，因为我想建就建，</div>
+        </div>
+        <router-view/>
+      </div>
+      <r-aside></r-aside>
+    </div>
   </div>
-
 </template>
+<script>
+  import raside from '../components/aside.vue'
+  export default {
+    components: {
+      'r-aside':raside
+    }
+  }
+</script>
 <style>
+  /*******导航样式start******/
   .top-user{
     height:30px;
     line-height:30px;
@@ -32,7 +87,7 @@
     color:#fff;
   }
   .top-nav-wrap{
-    border-bottom:1px solid #ccc;
+    border-bottom:1px solid #f1f1f1;
   }
   .top-nav{
     width:1205px;
@@ -46,6 +101,7 @@
     height:100%;
     margin-left:60px;
     text-align: center;
+    box-sizing: border-box;
   }
   .top-nav li a{
       color:#000;
@@ -56,4 +112,21 @@
   .top-nav li:hover,.top-nav li.active{
     border-bottom:2px solid #d6623d;
   }
+  /*******导航样式end******/
+
+  /*******内容容器样式start*********/
+  .main{
+    background-color:#f8f8f8;
+    width:1205px;
+    margin:0 auto;
+    margin-top: 2px;
+  }
+  .content-wrap{
+    width:800px;
+    height:100%;
+    float: left;
+    background-color: #fff;
+    padding:0 40px 40px 0;
+  }
+  /*******内容容器样式end*********/
 </style>

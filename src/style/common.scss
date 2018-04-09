@@ -20,3 +20,54 @@ table { border-collapse:collapse; border-spacing:0; }
   clear: both;
   overflow: hidden;
 }
+.yuan{
+  display: inline-block;
+  border-radius: 2px;
+  width: 40px;
+  height: 18px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 17px;
+  color: #fff;
+  background: #9faa65;
+}
+.zan{
+  background: #d6623d;
+  display: inline-block;
+  color: #fff;
+  border-radius: 2px;
+  width: 40px;
+  height: 18px;
+  text-align: center;
+  font-size: 13px;
+  line-height: 17px;
+}
+/**************首页内内容列表公共样式start***************/
+.content-wrap .list-item{
+  width: 100%;
+  padding-bottom: 35px;
+  margin-top: 40px;
+  overflow: hidden;
+  border-bottom: 2px dashed #f1f1f1;
+}
+.content-wrap .list-item .item-title{
+  cursor: pointer;
+}
+.content-wrap .list-item .time{
+  color: #a2a2a2;
+  margin-top: 20px;
+  font-style: normal;
+  font-size: 16px;
+  display: inline-block;
+}
+.content-wrap .list-item .item-title:hover{
+  color:#d6623d;
+}
+.content-wrap .list-item .item-desc{
+  width: 99%;
+  line-height: 33px;
+  margin: 0 auto;
+  margin-top: 10px;
+  clear: both;
+  font-size: 16px;
+}

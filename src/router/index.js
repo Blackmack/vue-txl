@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import TEST from '@/view/test'
 import Login from '@/view/login/login'
 import Index from '@/view/index'
+import Dongtai from '@/view/dongtai'
 
 Vue.use(Router)
 
@@ -11,19 +12,26 @@ export default new Router({
   base: __dirname,
   routes: [
     {
-      path: '/',
-      name:'index',
-      component: Index
-    },
-    {
-      path: '/test',
-      name: 'test',
-      component: TEST
-    },
-    {
-      path: '/',
+      path: '/login',
       name: 'login',
       component: Login
+    },
+    {
+      path: '/',
+      name:'index',
+      component: Index,
+      children: [
+        {
+          path: 'DT',
+          name:'dt',
+          component: Dongtai,
+        },
+        {
+          path: 'DZ',
+          name:'dz',
+          component: Index,
+        },
+      ]
     }
   ]
 })

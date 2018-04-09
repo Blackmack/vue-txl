@@ -1,5 +1,5 @@
 <template>
-  <div class="main clearfix">
+  <div class="login-main clearfix">
     <div class="left-img">
     </div>
     <div class="login-content">
@@ -90,7 +90,7 @@
   #app{
     height:100%;
   }
-  .main {
+  .login-main {
     height: 100%;
     .left-img {
       width: 39%;
