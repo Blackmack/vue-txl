@@ -5,13 +5,13 @@
     <div class="login-content">
       <h2 class="form-title">LOGIN</h2>
       <el-form :model="rulesForm" status-icon :rules="rules" ref="rulesForm" class="login-form">
-        <el-form-item  prop="userName">
+        <el-form-item  prop="username">
           <i class="icon-user"></i>
-          <el-input placeholder="用户名" type="text" v-model="rulesForm.userName"></el-input>
+          <el-input placeholder="用户名" type="text" v-model="rulesForm.username"></el-input>
         </el-form-item>
-        <el-form-item prop="pwd">
+        <el-form-item prop="password">
           <i class="icon-pwd"></i>
-          <el-input placeholder="密码" type="password" v-model="rulesForm.pwd" auto-complete="off"></el-input>
+          <el-input placeholder="密码" type="password" v-model="rulesForm.password" auto-complete="off"></el-input>
         </el-form-item>
         <!--<el-form-item  prop="imgCode">-->
           <!--<el-input placeholder="验证码" type="text" v-model="rulesForm.imgCode" auto-complete="off"></el-input>-->
@@ -24,6 +24,7 @@
   </div>
 </template>
 <script>
+  import {mapState, mapActions} from 'vuex'
   export default {
     data() {
       var validatePass1 = (rule, value, callback) => {
@@ -50,15 +51,14 @@
 //      }
       return {
         rulesForm: {
-          userName: '',
-          pwd: '',
-          imgCode: ''
+          username: '',
+          password: ''
         },
         rules: {
-          userName: [
+          username: [
             {validator: validatePass1, trigger: 'blur'}
           ],
-          pwd: [
+          password: [
             {validator: validatePass2, trigger: 'blur'}
           ]
 //          ,
@@ -69,12 +69,14 @@
       }
     },
     methods: {
+      ...mapActions(['Login']),
       submitForm(formName) {
         this.$refs[formName].validate((valid) => {
           if (valid) {
-            console.log(this.rulesForm)
+            this.Login(this.rulesForm).then((data)=>{
+                console.log(data);
+            })
           } else {
-            console.log('error submit!!');
             return false;
           }
         });

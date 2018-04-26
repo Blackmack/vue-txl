@@ -6,6 +6,7 @@ import {Login} from '../../api/getData'
 const actions = {
    login({commit,state},payload) {
      let res= Login(payload);
+
      return res;
    }
 }

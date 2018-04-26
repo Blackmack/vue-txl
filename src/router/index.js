@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import TEST from '@/view/test'
 import Login from '@/view/login/login'
+import Register from '@/view/login/register'
 import Index from '@/view/index'
 import Dongtai from '@/view/dongtai'
 
@@ -15,6 +16,11 @@ export default new Router({
       path: '/login',
       name: 'login',
       component: Login
+    },
+    {
+      path: '/register',
+      name: 'register',
+      component: Register
     },
     {
       path: '/',

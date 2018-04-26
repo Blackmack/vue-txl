@@ -10,7 +10,7 @@ const user = require('./api/user')
 app.get('/',function (req, res) {
   res.send('h')
 })
-app.use('/api/user',user)
+app.use('/user',user)
 
 app.listen(3000,()=>{
   console.log('server is start')

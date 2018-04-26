@@ -5,18 +5,20 @@
 import axios from 'axios'
 import store from '../store/index'
 
-axios.defaults.timeout = 5000;
+// axios.defaults.timeout = 5000;
 axios.defaults.baseURL = '/';
 
 //http request 拦截
 axios.interceptors.request.use(
   config => {
+    console.log(1)
     if (store.state.token) { // 判断是否存在token，如果存在的话，则每个http header都加上token
       config.headers.Authorization = 'token $(store.state.token)';
     }
     return config;
   },
   err => {
+    console.log(2)
     return Promise.reject(err);
   }
 )
@@ -24,9 +26,11 @@ axios.interceptors.request.use(
 // http response拦截
 axios.interceptors.response.use(
   response => {
+    console.log(3)
     return response;
   },
   error => {
+    console.log(error.response)
     if (error.response) {
       switch (error.response.status) {
         case 401:

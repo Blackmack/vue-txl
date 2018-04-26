@@ -5,7 +5,8 @@
 const util = {
   //输出返回的数据,封装数据格式为json
   jsonResponse: function(res,result) {
-    if(typeof result ==='undefined') {
+    console.log(result.length)
+    if(!result.length) {
       res.json({
         code: -1,
         data:result,
@@ -15,7 +16,7 @@ const util = {
     else {
       res.json({
         code: 200,
-        data: result,
+        data: result[0],
         msg: '操作成功'
       })
     }
