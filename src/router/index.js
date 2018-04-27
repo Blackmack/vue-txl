@@ -2,9 +2,12 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import TEST from '@/view/test'
 import Login from '@/view/login/login'
-import Register from '@/view/login/register'
+import userCenter from '@/view/usercenter/usermain'
 import Index from '@/view/index'
+import Register from '@/view/login/register'
+
 import Dongtai from '@/view/dongtai'
+
 
 Vue.use(Router)
 
@@ -38,6 +41,11 @@ export default new Router({
           component: Index,
         },
       ]
+    },
+    {
+      path: '/userCenter',
+      name:'userCenter',
+      component: userCenter,
     }
   ]
 })

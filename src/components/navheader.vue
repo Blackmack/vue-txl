@@ -1,64 +1,13 @@
 <template>
   <div>
     <div class="top-nav-wrap">
-      <nav class="top-nav">
-        <ul class="clearfix">
+      <nav class="top-nav clearfix">
+        <ul class="clearfix fl">
           <li class="active"><router-link to="/">首页</router-link></li>
           <li><router-link to="/DT">动态</router-link></li>
           <li><router-link to="/DZ">段子</router-link></li>
         </ul>
       </nav>
-    </div>
-    <div class="main clearfix">
-      <div class="content-wrap">
-        <div class="list-item">
-            <div class="item-title">
-              <h2>我为什么要建这个站点</h2>
-              <div class="time">2018.04.07&nbsp;&nbsp;<span class="yuan">原创</span>&nbsp;
-                <span class="zan">hot</span>
-              </div>
-            </div>
-            <div class="item-desc">因为我想建就建，因为我想建就建，因为我想建就建，因为我想建就建，因为我想建就建，因为我想建就建，因为我想建就建，因为我想建就建，</div>
-        </div>
-        <div class="list-item">
-          <div class="item-title">
-            <h2>我为什么要建这个站点</h2>
-            <div class="time">2018.04.07&nbsp;&nbsp;<span class="yuan">原创</span>&nbsp;
-              <span class="zan">hot</span>
-            </div>
-          </div>
-          <div class="item-desc">因为我想建就建，因为我想建就建，因为我想建就建，因为我想建就建，</div>
-        </div>
-        <div class="list-item">
-          <div class="item-title">
-            <h2>我为什么要建这个站点</h2>
-            <div class="time">2018.04.07&nbsp;&nbsp;<span class="yuan">原创</span>&nbsp;
-              <span class="zan">hot</span>
-            </div>
-          </div>
-          <div class="item-desc">因为我想建就建，因为我想建就建，因为我想建就建，因为我想建就建，因为我想建就建，</div>
-        </div>
-        <div class="list-item">
-          <div class="item-title">
-            <h2>我为什么要建这个站点</h2>
-            <div class="time">2018.04.07&nbsp;&nbsp;<span class="yuan">原创</span>&nbsp;
-              <span class="zan">hot</span>
-            </div>
-          </div>
-          <div class="item-desc">因为我想建就建，因为我想建就建，因为我想建就建，因为我想建就建，因为我想建就建，</div>
-        </div>
-        <div class="list-item">
-          <div class="item-title">
-            <h2>我为什么要建这个站点</h2>
-            <div class="time">2018.04.07&nbsp;&nbsp;<span class="yuan">原创</span>&nbsp;
-              <span class="zan">hot</span>
-            </div>
-          </div>
-          <div class="item-desc">因为我想建就建，因为我想建就建，因为我想建就建，因为我想建就建，因为我想建就建，因为我想建就建，</div>
-        </div>
-        <router-view/>
-      </div>
-      <r-aside></r-aside>
     </div>
   </div>
 </template>
