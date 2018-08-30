@@ -4,9 +4,11 @@
 const fs  = require('fs');
 const path = require('path');
 const express = require('express');
+const bodyParser=require('body-parser')
 const app = express();
 const user = require('./api/user')
 
+app.use(bodyParser.json());
 app.get('/',function (req, res) {
   res.send('h')
 })

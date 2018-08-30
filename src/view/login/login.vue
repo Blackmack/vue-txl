@@ -75,6 +75,10 @@
           if (valid) {
             this.Login(this.rulesForm).then((data)=>{
                 console.log(data);
+                if(data.code==200){
+                   console.log(3333)
+                   location.href='/userCenter'
+                }
             })
           } else {
             return false;

@@ -1,7 +1,7 @@
 <template>
   <div class="footer">
     <p>青春不老，我们不散场</p>
-    <p>© 2018-2020 深圳市博逊共创科技有限公司 All Rights Reserved.  粤ICP备1234567xxx号</p>
+    <p>© 2018-2020 huangc All Rights Reserved. <a href="http://www.miitbeian.gov.cn" target="_blank">粤ICP备18051756号</a></p>
   </div>
 </template>
 <style>
@@ -16,5 +16,8 @@
     font-size:14px;
     text-align: center;
     box-sizing: border-box;
+  }
+  .footer a{
+     color: #fff;
   }
 </style>

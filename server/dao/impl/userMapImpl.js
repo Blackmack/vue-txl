@@ -12,7 +12,7 @@ module.exports = {
   user: {
     login: (req, res, next) => {
       pool.getConnection((err,connection) => {
-        let  param=req.query
+        let  param=req.body
         connection.query($sql.user.login,[param.username,param.password],(err,result) => {
           $util.closeConnection(res,result,connection)
           // if(result.length!=0){

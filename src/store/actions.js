@@ -7,7 +7,8 @@ import {sysLogin} from '../api/getData'
 const actions = {
   async Login({commit,state},payload){
     let res = await sysLogin(payload)
-    commit(types.LOGIN,res)
+    commit(types.LOGIN,res.data)
+    return res.data
   }
 }
 export default actions

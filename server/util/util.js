@@ -9,7 +9,7 @@ const util = {
     if(!result.length) {
       res.json({
         code: -1,
-        data:result,
+        data:result.data,
         msg: '操作失败'
       })
     }

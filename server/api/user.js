@@ -9,7 +9,7 @@ const $sql= require('../dao/impl/userMapImpl')
 router.get('/', (req,res,next) => {
   res.json({a:1})
 })
-router.get('/login', (req,res,next) => {
+router.post('/login', (req,res,next) => {
    $sql.user.login(req,res,next)
 })
 

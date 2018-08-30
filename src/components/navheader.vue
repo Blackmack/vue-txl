@@ -24,7 +24,7 @@
   .top-user{
     height:30px;
     line-height:30px;
-    background-color:#606266;
+    background-color:#f5f5f5;
     font-size:14px;
     padding-right:30px;
   }
@@ -33,7 +33,7 @@
     margin-left:10px;
   }
   .top-user li a{
-    color:#fff;
+    color:#6c6c6c;
   }
   .top-nav-wrap{
     border-bottom:1px solid #f1f1f1;
