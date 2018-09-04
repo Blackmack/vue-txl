@@ -14,24 +14,22 @@ export default {
       }
   },
   mounted(){
-    setTimeout(()=>{
-        this.isshow=false
-    },2010)
   }
 }
 </script>
 
 <style lang="scss">
-  @import './style/common';
-  @keyframes progress {
-    0%{width: 0}
-    100%{width: 100%;}
+  @import './style/common.scss';
+  @keyframes progress_bar {
+    0%  {width: 0%}
+    100%  {width:100%}
   }
   .process{
+    position: absolute;
+    top:0;
     height: 2px;
-    width: 0;
     background-color: #d6623d;
-    animation: progress 2s;
+    animation: progress_bar 2s;
   }
 
 </style>

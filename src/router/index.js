@@ -1,19 +1,15 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import TEST from '@/view/test'
-import Login from '@/view/login/login'
-import userCenter from '@/view/usercenter/usermain'
-import Index from '@/view/index'
-import Register from '@/view/login/register'
+import Login from '../view/login/login'
+import userCenter from '../view/usercenter/usermain'
+import Index from '../view/index'
+import Register from '../view/login/register'
 
-import Dongtai from '@/view/dongtai'
+import Dongtai from '../view/dongtai'
 
 
 Vue.use(Router)
-
 export default new Router({
-  mode: 'history',
-  base: __dirname,
   routes: [
     {
       path: '/login',
@@ -31,15 +27,15 @@ export default new Router({
       component: Index,
       children: [
         {
-          path: 'DT',
+          path: '/DT',
           name:'dt',
           component: Dongtai,
         },
         {
-          path: 'DZ',
+          path: '/DZ',
           name:'dz',
           component: Index,
-        },
+        }
       ]
     },
     {
