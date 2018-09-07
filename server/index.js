@@ -14,6 +14,6 @@ app.get('/',function (req, res) {
 })
 app.use('/user',user)
 
-app.listen(3000,()=>{
+app.listen(3002,()=>{
   console.log('server is start')
 });

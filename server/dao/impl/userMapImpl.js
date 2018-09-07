@@ -14,12 +14,12 @@ module.exports = {
       pool.getConnection((err,connection) => {
         let  param=req.body
         connection.query($sql.user.login,[param.username,param.password],(err,result) => {
-          $util.closeConnection(res,result,connection)
-          // if(result.length!=0){
-          //   if(result[0].Status!=-2){
-          //
-          //   }
-          // }
+          let resultStr=JSON.stringify(result)
+          let resData=JSON.parse(resultStr)
+          if(!resData.length){
+            resData.msg='用户或密码错误'
+          }
+          $util.closeConnection(res,resData,connection)
         })
       })
     }

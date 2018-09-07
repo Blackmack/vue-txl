@@ -10,12 +10,12 @@ const util = {
       res.json({
         code: -1,
         data:result.data,
-        msg: '操作失败'
+        msg: result.msg
       })
     }
     else {
       res.json({
-        code: 200,
+        code: 1,
         data: result[0],
         msg: '操作成功'
       })

@@ -4,7 +4,7 @@
 const userSqlMap = {
   user:{
     //登录
-    login: 'select * from t_user where FName=? and FPwd=?',
+    login: 'select * from t_user where FuserName=? and Fpassword=?'
   }
 }
 module.exports = userSqlMap
