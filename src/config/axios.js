@@ -4,6 +4,7 @@
  */
 import axios from 'axios'
 import store from '../store/index'
+import {Message} from 'element-ui'
 
 // axios.defaults.timeout = 5000;
 // 设置默认请求头
@@ -97,6 +98,7 @@ axios.interceptors.response.use(
           errMsg = '连接服务器失败，错误码：' + error.response.status
       }
     }
+    Message.error(errMsg);
     return Promise.reject({code:999,msg:errMsg}) // 返回接口返回的错误信息
   }
 )

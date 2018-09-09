@@ -3,7 +3,7 @@
     <div class="left-img">
     </div>
     <div class="login-content">
-      <h2 class="form-title">LOGIN</h2>
+      <h2 class="form-title">LOGIN|登录</h2>
       <el-form :model="rulesForm" status-icon :rules="rules" ref="rulesForm" class="login-form">
         <el-form-item  prop="username">
           <i class="icon-user"></i>
@@ -27,40 +27,18 @@
   import {mapState, mapActions} from 'vuex'
   export default {
     data() {
-      var validatePass1 = (rule, value, callback) => {
-        if (value === '') {
-          callback(new Error('请输入用户名'));
-        } else {
-          callback();
-        }
-      }
-      var validatePass2 = (rule, value, callback) => {
-        if (value === '') {
-          callback(new Error('请输入密码'));
-        } else {
-          callback();
-        }
-      }
-//      var validatePass3 = (rule, value, callback) => {
-//        if (value === '') {
-//          callback(new Error('请输入验证码'));
-//        }
-//        else {
-//          callback();
-//        }
-//      }
       return {
         rulesForm: {
           username: '',
           password: ''
         },
         rules: {
-          username: [
-            {validator: validatePass1, trigger: 'blur'}
+          username:[
+            { required: true, message: '请输入用户名', trigger: 'blur' }
           ],
-          password: [
-            {validator: validatePass2, trigger: 'blur'}
-          ]
+          password:[
+            { required: true, message: '请输入密码', trigger: 'blur' }
+          ],
 //          ,
 //          imgCode: [
 //            {validator: validatePass3, trigger: 'blur'}
@@ -76,7 +54,6 @@
             this.Login(this.rulesForm).then((data)=>{
                 console.log(data);
                 if(data.code==1){
-                   console.log(3333)
                    location.href='/userCenter'
                 }
                 else{
@@ -102,8 +79,8 @@
   .login-main {
     height: 100%;
     .left-img {
-      width: 39%;
-      height: 99%;
+      width: 30%;
+      height: 100%;
       float: left;
       text-align:center;
       vertical-align:middle;
