@@ -48,7 +48,7 @@
             { required: true, message: '请再次输入密码', trigger: 'blur' }
           ],
           imgCode:[
-            { required: true, message: '请再次输入密码', trigger: 'blur' }
+            { required: true, message: '请输入验证码', trigger: 'blur' }
           ]
         }
       }
@@ -124,7 +124,6 @@
     border-style: solid;
     border-width: 0 0 0 1px;
     border-color: #ccc;
-    padding:10% 0;
     box-sizing:border-box;
   .form-title {
     text-align: center;
